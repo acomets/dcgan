@@ -57,27 +57,27 @@ Finally, we wrote a training function, starting from the one we used in class an
 ### 5. Results
 #### 5.1. Project ResultsOn MNIST, we generated satisfactory output. We observed that the cost of the discriminator was oscillating while the cost of the generator came down. Indeed, the discriminator can easily tell the difference between noise and true images at the beginning of the training but then the generated images become more and more plausible, while at the same time it has seen many images and it has become better at differentiating the two. The images we generate after training for 60 epochs are shown on fig. 2.
 
-![alt text](https://github.com/acomets/dcgan/img/mnist_generated.png “Randomly generated outputs on MNIST”)
+![alt text](https://github.com/acomets/dcgan/blob/master/img/mnist_generated.png “Randomly generated outputs on MNIST”)
 
 Fig. 2. Randomly generated outputs from our DCGAN on the MNIST dataset.
 
 Besides, when we do linear interpolation of vectors in the 100-dimensional representations space, we obtain relatively smooth transitions, shown on fig. 3.
 
-![alt text](https://github.com/acomets/dcgan/img/mnist_linear_interpolation.png “Linear interpolations on MNIST”)
+![alt text](https://github.com/acomets/dcgan/blob/master/img/mnist_linear_interpolation.png “Linear interpolations on MNIST”)
 
 Fig. 3. Linear interpolations between vectors in the representations space.
 
 Our output on the LFW faces were less visually successful and realistic. See example below. Unfortunately we were unable to try the vector arithmetics at this stage.
 
-![alt text](https://github.com/acomets/dcgan/img/faces_generated.png “Randomly generated faces”)
+![alt text](https://github.com/acomets/dcgan/blob/master/img/faces_generated.png “Randomly generated faces”)
 
 Fig. 4. Examples of randomly generated faces after 128 epochs of training on LFW
 
 #### 5.2. Comparison of Results
 In our paper, the smooth transitions were shown on sample images of bedrooms from the LSUN dataset, so we searched for other papers online with similar results on handwritten digits. Fig. 6 below shows results from [4].
 
-![alt text](https://github.com/acomets/dcgan/img/lin_int_original1.png “Linear interpolations from original paper”)
-![alt text](https://github.com/acomets/dcgan/img/lin_int_original2.png “Linear interpolations from original paper”)
+![alt text](https://github.com/acomets/dcgan/blob/master/img/lin_int_original1.png “Linear interpolations from original paper”)
+![alt text](https://github.com/acomets/dcgan/blob/master/img/lin_int_original2.png “Linear interpolations from original paper”)
 
 
 Fig. 6. Linear interpolations between vectors in the representations space from Goodfellow et al. [4]
@@ -87,6 +87,8 @@ Fig. 6. Linear interpolations between vectors in the representations space from 
 This project was a great complement to the work we did in class on neural networks. Building on our approach of CNNs and reconstruction of noisy input images (dropped out pixels), we discovered the powerful technique of adversarial training on some concrete examples.
 We successfully implemented a DCGAN in Theano and overcame the challenges of this type of models by defining it with fonctions instead of classes.### 7. Acknowledgement
 We thank Mehmet Kerem Turkcan for his time and support, and for sharing some of his previous difficulties training GANs.### 8. References
-[1] https://bitbucket.org/e_4040_ta/e4040_project_gsac[2] A. Coates and A. Y. Ng, “Learning feature representations with k-means”, in Neural Networks: Tricks of the Trade, pp. 561–580. Springer, 2012.
-[3] P. Vincent, H. Larochelle, I. Lajoie, Y. Bengio, and P.-A. Manzagol, “Stacked denoising autoencoders: Learning useful representations in a deep network with a local denoising criterion”, The Journal of Machine Learning Research, 11:3371–3408, 2010.[4] I. J. Goodfellow, J. Pouget-Abadie, M. Mirza, et al. “Generative adversarial nets”, NIPS 2014, Département d’Informatique et de Recherche Opérationnelle, Université de Montréal.[5] A. Radford, L. Metz, S. Chintala, “Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks”, Under review for ICLR 2016, January 7, 2016.[6] J. T. Springenberg, A. Dosovitskiy, T. Brox, M. Riedmiller, “Striving For Simplicity: The All Convolutional Net”, ICLR 2015, Department of Computer Science, University of Freiburg, April 13, 2015.[7] T. Salimans, I. J. Goodfellow, W. Zaremba, V. Cheung, A. Radford, X. Chen, “Improved Techniques for Training GANs”, June 10, 2016.
+[1] https://bitbucket.org/e_4040_ta/e4040_project_gsac
+[2] A. Coates and A. Y. Ng, “Learning feature representations with k-means”, in Neural Networks: Tricks of the Trade, pp. 561–580. Springer, 2012.
+
+[3] P. Vincent, H. Larochelle, I. Lajoie, Y. Bengio, and P.-A. Manzagol, “Stacked denoising autoencoders: Learning useful representations in a deep network with a local denoising criterion”, The Journal of Machine Learning Research, 11:3371–3408, 2010.[4] I. J. Goodfellow, J. Pouget-Abadie, M. Mirza, et al. “Generative adversarial nets”, NIPS 2014, Département d’Informatique et de Recherche Opérationnelle, Université de Montréal.[5] A. Radford, L. Metz, S. Chintala, “Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks”, Under review for ICLR 2016, January 7, 2016.[6] J. T. Springenberg, A. Dosovitskiy, T. Brox, M. Riedmiller, “Striving For Simplicity: The All Convolutional Net”, ICLR 2015, Department of Computer Science, University of Freiburg, April 13, 2015.[7] T. Salimans, I. J. Goodfellow, W. Zaremba, V. Cheung, A. Radford, X. Chen, “Improved Techniques for Training GANs”, June 10, 2016.
 
